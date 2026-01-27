@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>ELEC PRO – Électricien de Confiance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Entreprise d'électricité générale : installation, rénovation, dépannage 7j/7. Électriciens qualifiés, interventions rapides et sécurisées." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    :root {
+      --electric-blue: #0056b3;
+      --safety-yellow: #FFC107;
+      --bg-light: #F3F4F6;
+      --ink: #111827;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg-light);
+      color: var(--ink);
+    }
+
+    .bg-electric {
+      background-color: var(--electric-blue);
+    }
+    .text-electric {
+      color: var(--electric-blue);
+    }
+    .border-electric {
+      border-color: var(--electric-blue);
+    }
+
+    .bg-safety {
+      background-color: var(--safety-yellow);
+    }
+    .text-safety {
+      color: var(--safety-yellow);
+    }
+
+    .hero-bg {
+      position: relative;
+      background-image:
+        linear-gradient(120deg, rgba(0, 18, 51, 0.85), rgba(0, 18, 51, 0.65)),
+        url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(255, 193, 7, 0.25), transparent 55%);
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .section-padding {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    @media (min-width: 1024px) {
+      .section-padding {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Top Bar -->
+  <div class="bg-slate-900 text-safety text-sm sm:text-base">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2 font-semibold tracking-wide uppercase">
+        <i class="fa-solid fa-triangle-exclamation text-safety"></i>
+        <span class="text-white">Urgence électricité 7j/7</span>
+      </div>
+      <a href="tel:0102030405" class="flex items-center gap-2 text-white font-semibold">
+        <i class="fa-solid fa-phone-volume text-safety"></i>
+        <span class="text-lg sm:text-xl">01 02 03 04 05</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header & Navbar -->
+  <header class="bg-white shadow-sm sticky top-0 z-20">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center space-x-2">
+          <div class="w-9 h-9 bg-electric text-white flex items-center justify-center rounded-md shadow-sm">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold tracking-[0.25em] uppercase text-electric">ELEC PRO</div>
+            <p class="text-xs text-slate-500 leading-tight">Électricité générale</p>
+          </div>
+        </a>
+
+        <!-- Menu -->
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700">
+          <a href="#services" class="hover:text-electric transition-colors">Services</a>
+          <a href="#why-us" class="hover:text-electric transition-colors">Pourquoi nous choisir</a>
+          <a href="#cta" class="hover:text-electric transition-colors">Devis</a>
+          <a href="#contact" class="hover:text-electric transition-colors">Contact</a>
+        </div>
+
+        <!-- CTA -->
+        <div class="hidden md:flex">
+          <a href="#cta" class="inline-flex items-center gap-2 bg-electric text-white px-4 py-2 rounded-md text-sm font-semibold shadow-sm hover:bg-blue-700 transition-colors">
+            <i class="fa-solid fa-file-signature text-sm"></i>
+            <span>Demander un devis</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg text-white">
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <!-- Text -->
+          <div>
+            <p class="text-sm uppercase tracking-[0.25em] text-safety mb-3 font-semibold">
+              Électriciens qualifiés – Interventions sécurisées
+            </p>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+              Votre électricien de confiance à <span class="text-safety">[Votre Ville]</span>
+            </h1>
+            <p class="text-base sm:text-lg text-slate-100 max-w-xl mb-6">
+              Installation, rénovation et dépannage électrique pour particuliers, professionnels et industrie.
+              Interventions rapides, diagnostics précis et installations conformes aux normes en vigueur.
+            </p>
+
+            <!-- Badges -->
+            <div class="flex flex-wrap gap-3 mb-8 text-xs sm:text-sm">
+              <span class="inline-flex items-center gap-2 bg-white/10 border border-white/25 px-3 py-1 rounded-full">
+                <i class="fa-solid fa-shield-halved text-safety"></i> Normes NF C 15‑100
+              </span>
+              <span class="inline-flex items-center gap-2 bg-white/10 border border-white/25 px-3 py-1 rounded-full">
+                <i class="fa-solid fa-certificate text-safety"></i> Certifié RGE / Qualifelec
+              </span>
+              <span class="inline-flex items-center gap-2 bg-white/10 border border-white/25 px-3 py-1 rounded-full">
+                <i class="fa-solid fa-file-invoice-dollar text-safety"></i> Devis gratuit sous 24h
+              </span>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-wrap gap-4 items-center mb-6">
+              <a href="tel:0102030405"
+                 class="inline-flex items-center justify-center gap-2 bg-safety text-slate-900 font-semibold px-5 py-3 rounded-md text-sm shadow-md hover:bg-amber-400 transition-colors">
+                <i class="fa-solid fa-phone"></i>
+                <span>Appeler maintenant</span>
+              </a>
+              <a href="#services"
+                 class="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/40 text-white font-medium px-5 py-3 rounded-md text-sm hover:bg-white/15 transition-colors">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Voir nos services</span>
+              </a>
+            </div>
+
+            <!-- Secondary info -->
+            <p class="text-xs sm:text-sm text-slate-200">
+              <i class="fa-solid fa-clock me-1 text-safety"></i> Dépannage d'urgence en moins de 2h (selon secteur) –
+              <i class="fa-solid fa-location-dot mx-1 text-safety"></i> Intervention sur [Zone d'intervention].
+            </p>
+          </div>
+
+          <!-- Side Card -->
+          <div class="md:justify-self-end">
+            <div class="bg-slate-900/80 backdrop-blur rounded-xl border border-white/10 shadow-2xl p-6 sm:p-7 max-w-md">
+              <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-bolt text-safety"></i>
+                Intervention rapide & sécurisée
+              </h2>
+              <ul class="space-y-3 text-sm text-slate-100 mb-5">
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-check mt-1 text-safety"></i>
+                  <span>Dépannage 7j/7 : coupure de courant, court-circuit, disjoncteur qui saute.</span>
+                </li>
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-check mt-1 text-safety"></i>
+                  <span>Installations neuves et rénovations complètes pour appartements, maisons et locaux pros.</span>
+                </li>
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-check mt-1 text-safety"></i>
+                  <span>Mise aux normes et sécurisation de tableaux électriques, chauffages, éclairages.</span>
+                </li>
+              </ul>
+              <div class="flex flex-col gap-3">
+                <a href="#cta" class="inline-flex items-center justify-center gap-2 w-full bg-electric text-white text-sm font-semibold py-2.5 rounded-md hover:bg-blue-700 transition-colors">
+                  <i class="fa-solid fa-file-signature"></i>
+                  <span>Obtenir un devis gratuit</span>
+                </a>
+                <p class="text-[11px] text-slate-300 text-center">
+                  Réponse sous 24h ouvrées – Sans engagement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section-padding">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
+              Nos services d'électricité générale
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 max-w-2xl">
+              Des prestations complètes pour sécuriser et optimiser vos installations électriques,
+              que vous soyez particulier, professionnel ou industriel.
+            </p>
+          </div>
+          <div class="text-xs sm:text-sm text-slate-500">
+            <i class="fa-solid fa-circle-info me-1 text-electric"></i>
+            Interventions conformes aux normes en vigueur, matériel de marques reconnues.
+          </div>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Mise aux normes -->
+          <article class="bg-white rounded-xl shadow-sm border border-slate-200/80 hover:border-electric hover:-translate-y-1 hover:shadow-md transition-all">
+            <div class="p-5 h-full flex flex-col">
+              <div class="w-10 h-10 rounded-md bg-electric/10 text-electric flex items-center justify-center mb-4">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">Mise aux normes</h3>
+              <p class="text-sm text-slate-600 mb-3">
+                Diagnostic complet de vos installations et mise en conformité selon la norme NF C 15‑100
+                pour sécuriser votre habitation ou vos locaux.
+              </p>
+              <ul class="mt-auto text-xs text-slate-500 space-y-1">
+                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Tableaux électriques</li>
+                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Mise à la terre</li>
+                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Protection différentielle</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Dépannage -->
+          <article class="bg-white rounded-xl shadow-sm border border-slate-200/80 hover:border-electric hover:-translate-y-1 hover:shadow-md transition-all">
+            <div class="p-5 h-full flex flex-col">
+              <div class="w-10 h-10 rounded-md bg-electric/10 text-electric flex items-center justify-center mb-4">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">Dépannage</h3>
+              <p class="text-sm text-slate-600 mb-3">
+                Recherche de panne, réparation de courts-circuits, réarmement de disjoncteurs,
+                sécurisation après sinistre ou dégât des eaux.
+              </p>
+              <ul class="mt-auto text-xs text-slate-500 space-y-1">
+                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Urgences 7j/7</li>
+                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Localisation de défauts</li>
+                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Remise en service sécurisée</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Domotique -->
+          <article class="bg-white rounded-xl shadow-sm border border-slate-200/80 hover:border-electric hover:-translate-y-1 hover:shadow-md transition-all">
+            <div class="p-5 h-full flex flex-col">
+              <div class="w-10 h-10 rounded-md bg-electric/10 text-electric flex items-center justify-center mb-4">
+                <i class="fa-solid fa-house-signal"></i>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">Domotique</h3>
+              <p class="text-sm text-slate-600 mb-3">
+                Installation de solutions connectées pour piloter éclairages, volets roulants, chauffage
+                et sécurité depuis votre smartphone.
+              </p>
+              <ul class="mt-auto text-xs text-slate-500 space-y-1">
+                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Scénarios d’éclairage</li>
+                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Gestion d’énergie</li>
+                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Solutions filaires & radio</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Installation industrielle -->
+          <article class="bg-white rounded-xl shadow-sm border border-slate-200/80 hover:border-electric hover:-translate-y-1 hover:shadow-md transition-all">
+            <div class="p-5 h-full flex flex-col">
+              <div class="w-10 h-10 rounded-md bg-electric/10 text-electric flex items-center justify-center mb-4">
+                <i class="fa-solid fa-industry"></i>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">Installation industrielle</h3>
+              <p class="text-sm text-slate-600 mb-3">
+                Réseaux électriques pour ateliers, entrepôts, commerces et bureaux. Études de charge
+                et dimensionnement des protections.
+              </p>
+              <ul class="mt-auto text-xs text-slate-500 space-y-1">
+                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Tableaux tri-phasés</li>
+                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Éclairage technique</li>
+                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Bornes de recharge & machines</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pourquoi nous choisir -->
+    <section id="why-us" class="section-padding bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-electric mb-2">
+            Garantie, sécurité & transparence
+          </p>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+            Pourquoi choisir <span class="text-electric">ELEC PRO</span> pour vos travaux électriques&nbsp;?
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mb-6">
+            Nous accompagnons particuliers et professionnels pour tous leurs projets électriques,
+            avec des engagements clairs : sécurité, conseils techniques et respect des délais.
+          </p>
+
+          <dl class="space-y-4">
+            <div class="flex gap-4">
+              <div class="mt-1">
+                <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-electric text-white">
+                  <i class="fa-solid fa-file-lines"></i>
+                </span>
+              </div>
+              <div>
+                <dt class="font-semibold text-slate-900">Devis gratuit et détaillé</dt>
+                <dd class="text-sm text-slate-600">
+                  Chaque devis précise clairement la nature des travaux, le matériel utilisé et les délais prévus,
+                  sans frais cachés.
+                </dd>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="mt-1">
+                <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-electric text-white">
+                  <i class="fa-solid fa-file-shield"></i>
+                </span>
+              </div>
+              <div>
+                <dt class="font-semibold text-slate-900">Assurance décennale</dt>
+                <dd class="text-sm text-slate-600">
+                  Vos installations sont couvertes par notre assurance décennale, gage de sérieux et de sécurité pour vos projets.
+                </dd>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="mt-1">
+                <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-electric text-white">
+                  <i class="fa-solid fa-award"></i>
+                </span>
+              </div>
+              <div>
+                <dt class="font-semibold text-slate-900">Certifié RGE / Qualifelec</dt>
+                <dd class="text-sm text-slate-600">
+                  Nos qualifications vous permettent de bénéficier d’aides et de subventions pour certains travaux
+                  d’amélioration énergétique.
+                </dd>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="mt-1">
+                <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-electric text-white">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </span>
+              </div>
+              <div>
+                <dt class="font-semibold text-slate-900">Prix transparents</dt>
+                <dd class="text-sm text-slate-600">
+                  Grille tarifaire claire, facturation au juste prix et validation de chaque étape avant intervention.
+                </dd>
+              </div>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Visuel / Stats -->
+        <div class="space-y-5">
+          <div class="rounded-xl overflow-hidden shadow-md border border-slate-200">
+            <img
+              src="https://images.unsplash.com/photo-1582719478171-2f2dfcdf9dbc?auto=format&fit=crop&w=1200&q=80"
+              alt="Électricien effectuant une installation électrique"
+              class="w-full h-56 md:h-64 object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="grid grid-cols-3 gap-4 text-center">
+            <div class="bg-slate-50 rounded-lg border border-slate-200 py-4 px-2">
+              <p class="text-xl font-bold text-electric">15+</p>
+              <p class="text-xs text-slate-600">Années d'expérience</p>
+            </div>
+            <div class="bg-slate-50 rounded-lg border border-slate-200 py-4 px-2">
+              <p class="text-xl font-bold text-electric">800+</p>
+              <p class="text-xs text-slate-600">Interventions / an</p>
+            </div>
+            <div class="bg-slate-50 rounded-lg border border-slate-200 py-4 px-2">
+              <p class="text-xl font-bold text-electric">4.9/5</p>
+              <p class="text-xs text-slate-600">Avis clients moyens</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bandeau Appel à l'action -->
+    <section id="cta" class="section-padding">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-2xl bg-electric text-white p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-lg">
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold mb-2">
+              Un projet en tête ou une panne à résoudre&nbsp;?
+            </h2>
+            <p class="text-sm sm:text-base text-slate-100 max-w-xl">
+              Expliquez-nous votre situation en quelques mots et nous revenons vers vous avec une proposition
+              personnalisée et un devis gratuit.
+            </p>
+          </div>
+          <div class="flex flex-col gap-3 w-full md:w-auto">
+            <a href="#contact"
+               class="inline-flex items-center justify-center gap-2 bg-safety text-slate-900 font-semibold text-sm px-5 py-2.5 rounded-md shadow-md hover:bg-amber-400 transition-colors">
+              <i class="fa-solid fa-envelope-open-text"></i>
+              <span>Contactez-nous</span>
+            </a>
+            <a href="tel:0102030405"
+               class="inline-flex items-center justify-center gap-2 border border-white/50 text-white text-xs px-4 py-2 rounded-md hover:bg-white/10 transition-colors">
+              <i class="fa-solid fa-phone"></i>
+              <span>Urgence / dépannage : 01 02 03 04 05</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Infos -->
+    <section id="contact" class="section-padding bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10">
+        <!-- Infos -->
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+            Contact & zone d’intervention
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mb-6">
+            Nous intervenons rapidement sur [Ville] et alentours pour tous vos besoins en électricité générale.
+          </p>
+
+          <div class="space-y-4 text-sm">
+            <div class="flex gap-3">
+              <i class="fa-solid fa-location-dot mt-1 text-electric"></i>
+              <div>
+                <p class="font-semibold">ELEC PRO – Électricité Générale</p>
+                <p class="text-slate-600">12 rue des Artisans<br />00000 [Ville, Région]</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <i class="fa-solid fa-phone mt-1 text-electric"></i>
+              <div>
+                <p class="font-semibold">Téléphone</p>
+                <a href="tel:0102030405" class="text-slate-600 hover:text-electric">01 02 03 04 05</a>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <i class="fa-solid fa-envelope mt-1 text-electric"></i>
+              <div>
+                <p class="font-semibold">E‑mail</p>
+                <a href="mailto:contact@elecpro.fr" class="text-slate-600 hover:text-electric">contact@elecpro.fr</a>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <i class="fa-solid fa-clock mt-1 text-electric"></i>
+              <div>
+                <p class="font-semibold">Horaires d’intervention</p>
+                <p class="text-slate-600">Du lundi au vendredi : 8h00 – 18h30<br />Dépannage d’urgence : 7j/7</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <i class="fa-solid fa-map mt-1 text-electric"></i>
+              <div>
+                <p class="font-semibold">Zone d’intervention</p>
+                <p class="text-slate-600">
+                  [Ville] centre, [Villes voisines], agglomération et secteur dans un rayon de 30 km.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire simple (visuel) -->
+        <div class="bg-slate-50 rounded-xl border border-slate-200 shadow-sm p-6 sm:p-7">
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">
+            Décrivez votre besoin
+          </h3>
+          <p class="text-sm text-slate-600 mb-5">
+            Ce formulaire est un exemple statique. Connectez-le ensuite à votre outil de formulaire ou CRM.
+          </p>
+
+          <form class="space-y-4">
+            <div>
+              <label for="name" class="block text-xs font-medium text-slate-700 mb-1">Nom / Entreprise</label>
+              <input id="name" type="text" class="w-full rounded-md border-slate-300 text-sm shadow-sm focus:border-electric focus:ring-electric" placeholder="Ex : Dupont ou SARL Bâtiment Plus" />
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="email" class="block text-xs font-medium text-slate-700 mb-1">E‑mail</label>
+                <input id="email" type="email" class="w-full rounded-md border-slate-300 text-sm shadow-sm focus:border-electric focus:ring-electric" placeholder="vous@exemple.fr" />
+              </div>
+              <div>
+                <label for="phone" class="block text-xs font-medium text-slate-700 mb-1">Téléphone</label>
+                <input id="phone" type="tel" class="w-full rounded-md border-slate-300 text-sm shadow-sm focus:border-electric focus:ring-electric" placeholder="06 00 00 00 00" />
+              </div>
+            </div>
+            <div>
+              <label for="topic" class="block text-xs font-medium text-slate-700 mb-1">Type de projet</label>
+              <select id="topic" class="w-full rounded-md border-slate-300 text-sm shadow-sm focus:border-electric focus:ring-electric">
+                <option>Choisir une option</option>
+                <option>Mise aux normes / rénovation</option>
+                <option>Dépannage / panne électrique</option>
+                <option>Domotique / maison connectée</option>
+                <option>Installation industrielle / tertiaire</option>
+                <option>Autre demande</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block text-xs font-medium text-slate-700 mb-1">Votre message</label>
+              <textarea id="message" rows="4" class="w-full rounded-md border-slate-300 text-sm shadow-sm focus:border-electric focus:ring-electric" placeholder="Décrivez brièvement votre projet ou votre panne…"></textarea>
+            </div>
+            <button type="button" class="w-full inline-flex items-center justify-center gap-2 bg-electric text-white text-sm font-semibold py-2.5 rounded-md shadow-sm hover:bg-blue-700 transition-colors">
+              <i class="fa-solid fa-paper-plane text-xs"></i>
+              <span>Envoyer ma demande (exemple)</span>
+            </button>
+            <p class="text-[11px] text-slate-500">
+              En envoyant ce formulaire, vous acceptez que vos données soient utilisées pour être recontacté dans le cadre de votre demande.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-200 pt-10 pb-5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 text-sm pb-6 border-b border-slate-700/60">
+        <!-- Logo & pitch -->
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-electric text-white flex items-center justify-center rounded-md">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold tracking-[0.25em] uppercase">ELEC PRO</p>
+              <p class="text-[11px] text-slate-400">Entreprise d'électricité générale</p>
+            </div>
+          </div>
+          <p class="text-slate-300 text-xs sm:text-sm">
+            Équipe d’électriciens qualifiés pour vos travaux d’installation, de rénovation et de dépannage.
+            Interventions sécurisées, conseils techniques et respect des normes.
+          </p>
+        </div>
+
+        <!-- Zone d'intervention -->
+        <div>
+          <h3 class="text-xs font-semibold tracking-wide uppercase text-slate-400 mb-3">Zone d’intervention</h3>
+          <p class="text-xs sm:text-sm text-slate-300">
+            [Ville] et agglomération<br />
+            [Ville 2] – [Ville 3] – [Ville 4]<br />
+            Rayon d’environ 30 km.
+          </p>
+        </div>
+
+        <!-- Légal -->
+        <div>
+          <h3 class="text-xs font-semibold tracking-wide uppercase text-slate-400 mb-3">Mentions légales</h3>
+          <ul class="space-y-1 text-xs sm:text-sm text-slate-300">
+            <li>SIRET : 000 000 000 00000</li>
+            <li>Assurance décennale : Oui</li>
+            <li>RGE / Qualifelec : Oui</li>
+            <li><a href="#" class="hover:text-safety">Mentions légales</a></li>
+            <li><a href="#" class="hover:text-safety">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 text-[11px] text-slate-500">
+        <p>© <span id="year"></span> ELEC PRO – Tous droits réservés.</p>
+        <p>Site vitrine – Exemple de maquette UI/UX pour entreprise d’électricité générale.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Met à jour automatiquement l'année dans le footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
