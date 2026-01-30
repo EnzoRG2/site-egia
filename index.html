@@ -2,627 +2,571 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Électricité Grappe – Installations électriques industrielles</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Spécialiste des installations électriques industrielles et tertiaires à Champagnole : postes de transformation, armoires de puissance, automatismes, maintenance et dépannage 7j/7." />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Électricité Grappe – Spécialiste Électricité Industrielle | Champagnole</title>
+  <meta name="description" content="Électricité Grappe : installations électriques industrielles, tableaux de puissance, automatismes, maintenance préventive. Expertise technique pour usines, ateliers et bâtiments industriels à Champagnole et région." />
+  
+  <!-- Preconnect pour performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet" />
+  
   <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
-  <style>
-    :root {
-      --electric-blue: #0056b3;
-      --safety-yellow: #FFC107;
-      --bg-light: #F3F4F6;
-      --ink: #111827;
-    }
-
-    body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: var(--bg-light);
-      color: var(--ink);
-    }
-
-    .bg-electric {
-      background-color: var(--electric-blue);
-    }
-    .text-electric {
-      color: var(--electric-blue);
-    }
-    .border-electric {
-      border-color: var(--electric-blue);
-    }
-
-    .bg-safety {
-      background-color: var(--safety-yellow);
-    }
-    .text-safety {
-      color: var(--safety-yellow);
-    }
-
-    .hero-bg {
-      position: relative;
-      background-image:
-        linear-gradient(120deg, rgba(0, 18, 51, 0.88), rgba(0, 18, 51, 0.72)),
-        url("https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    .hero-bg::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 10% 0%, rgba(255, 193, 7, 0.25), transparent 55%);
-      mix-blend-mode: screen;
-      pointer-events: none;
-    }
-
-    .section-padding {
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-    }
-
-    @media (min-width: 1024px) {
-      .section-padding {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="antialiased">
-
-  <!-- Top Bar -->
-  <div class="bg-slate-900 text-safety text-sm sm:text-base">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div class="flex items-center gap-2 font-semibold tracking-wide uppercase">
-        <i class="fa-solid fa-triangle-exclamation text-safety"></i>
-        <span class="text-white">Urgence électricité 7j/7</span>
+<body>
+  
+  <!-- Top Bar Urgence -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-content">
+        <div class="urgency-badge">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span>Intervention d'urgence 24/7</span>
+        </div>
+        <a href="tel:0750000000" class="phone-link">
+          <i class="fas fa-phone-alt"></i>
+          <span>07 50 00 00 00</span>
+        </a>
       </div>
-      <a href="tel:0102030405" class="flex items-center gap-2 text-white font-semibold">
-        <i class="fa-solid fa-phone-volume text-safety"></i>
-        <span class="text-lg sm:text-xl">01 02 03 04 05</span>
-      </a>
     </div>
   </div>
 
-  <!-- Header & Navbar -->
-  <header class="bg-white shadow-sm sticky top-0 z-20">
-    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
-        <a href="#hero" class="flex items-center space-x-2">
-          <div class="w-9 h-9 bg-electric text-white flex items-center justify-center rounded-md shadow-sm">
-            <i class="fa-solid fa-bolt"></i>
+  <!-- Header Navigation -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#hero" class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-bolt"></i>
           </div>
-          <div>
-            <div class="text-sm font-bold tracking-[0.25em] uppercase text-electric">ÉLECTRICITÉ GRAPPE</div>
-            <p class="text-xs text-slate-500 leading-tight">Entreprise d'électricité générale</p>
+          <div class="logo-text">
+            <span class="logo-name">ÉLECTRICITÉ GRAPPE</span>
+            <span class="logo-tagline">Électricité Industrielle</span>
           </div>
         </a>
-
-        <!-- Menu -->
-        <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700">
-          <a href="#services" class="hover:text-electric transition-colors">Services</a>
-          <a href="#why-us" class="hover:text-electric transition-colors">Pourquoi nous choisir</a>
-          <a href="#cta" class="hover:text-electric transition-colors">Devis</a>
-          <a href="#contact" class="hover:text-electric transition-colors">Contact</a>
-        </div>
-
-        <!-- CTA -->
-        <div class="hidden md:flex">
-          <a href="#cta" class="inline-flex items-center gap-2 bg-electric text-white px-4 py-2 rounded-md text-sm font-semibold shadow-sm hover:bg-blue-700 transition-colors">
-            <i class="fa-solid fa-file-signature text-sm"></i>
-            <span>Demander un devis</span>
-          </a>
-        </div>
-      </div>
-    </nav>
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hero" class="nav-link">Accueil</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#expertise" class="nav-link">Expertise</a></li>
+          <li><a href="#realisations" class="nav-link">Réalisations</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#contact" class="nav-link btn-nav">Devis gratuit</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-
+    
     <!-- Hero Section -->
-    <section id="hero" class="hero-bg text-white">
-      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div class="grid md:grid-cols-2 gap-10 items-center">
-          <!-- Text -->
-          <div>
-            <p class="text-sm uppercase tracking-[0.25em] text-safety mb-3 font-semibold">
-              Installations industrielles • Tertiaire • Process
-            </p>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-              Votre partenaire électricité industrielle à <span class="text-safety">Champagnole</span>
-            </h1>
-            <p class="text-base sm:text-lg text-slate-100 max-w-xl mb-6">
-              Électricité Grappe conçoit, installe et maintient vos infrastructures électriques industrielles et tertiaires :
-              postes de transformation, armoires de puissance, réseaux tri‑phasés, automatismes et éclairage technique.
-              Nous sécurisons vos lignes de production et vos bâtiments en garantissant disponibilité et conformité aux normes.
-            </p>
-
-            <!-- Badges -->
-            <div class="flex flex-wrap gap-3 mb-8 text-xs sm:text-sm">
-              <span class="inline-flex items-center gap-2 bg-white/10 border border-white/25 px-3 py-1 rounded-full">
-                <i class="fa-solid fa-shield-halved text-safety"></i> Normes NF C 15‑100
-              </span>
-              <span class="inline-flex items-center gap-2 bg-white/10 border border-white/25 px-3 py-1 rounded-full">
-                <i class="fa-solid fa-certificate text-safety"></i> Certifié RGE / Qualifelec
-              </span>
-              <span class="inline-flex items-center gap-2 bg-white/10 border border-white/25 px-3 py-1 rounded-full">
-                <i class="fa-solid fa-file-invoice-dollar text-safety"></i> Devis gratuit sous 24h
-              </span>
-            </div>
-
-            <!-- CTAs -->
-            <div class="flex flex-wrap gap-4 items-center mb-6">
-              <a href="tel:0102030405"
-                 class="inline-flex items-center justify-center gap-2 bg-safety text-slate-900 font-semibold px-5 py-3 rounded-md text-sm shadow-md hover:bg-amber-400 transition-colors">
-                <i class="fa-solid fa-phone"></i>
-                <span>Appeler maintenant</span>
-              </a>
-              <a href="#services"
-                 class="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/40 text-white font-medium px-5 py-3 rounded-md text-sm hover:bg-white/15 transition-colors">
-                <i class="fa-solid fa-list-check"></i>
-                <span>Voir nos services</span>
-              </a>
-            </div>
-
-            <!-- Secondary info -->
-            <p class="text-xs sm:text-sm text-slate-200">
-              <i class="fa-solid fa-clock me-1 text-safety"></i> Maintenance préventive & curative – astreinte dépannage 7j/7 (selon contrat) –
-              <i class="fa-solid fa-location-dot mx-1 text-safety"></i> Ateliers, usines et entrepôts sur Champagnole et Jura.
-            </p>
-          </div>
-
-          <!-- Side Card -->
-          <div class="md:justify-self-end">
-            <div class="bg-slate-900/80 backdrop-blur rounded-xl border border-white/10 shadow-2xl p-6 sm:p-7 max-w-md">
-              <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-bolt text-safety"></i>
-                Intervention rapide & sécurisée
-              </h2>
-              <ul class="space-y-3 text-sm text-slate-100 mb-5">
-                <li class="flex gap-3">
-                  <i class="fa-solid fa-check mt-1 text-safety"></i>
-              <span>Dépannage 7j/7 : défauts d&apos;alimentation, disjonctions répétées, arrêts de lignes de production.</span>
-                </li>
-                <li class="flex gap-3">
-                  <i class="fa-solid fa-check mt-1 text-safety"></i>
-                  <span>Installations neuves et rénovations complètes de bâtiments industriels, entrepôts, ateliers et locaux tertiaires.</span>
-                </li>
-                <li class="flex gap-3">
-                  <i class="fa-solid fa-check mt-1 text-safety"></i>
-                  <span>Mise aux normes et sécurisation de postes, armoires de puissance, MCC, moteurs et éclairages techniques.</span>
-                </li>
-              </ul>
-              <div class="flex flex-col gap-3">
-                <a href="#cta" class="inline-flex items-center justify-center gap-2 w-full bg-electric text-white text-sm font-semibold py-2.5 rounded-md hover:bg-blue-700 transition-colors">
-                  <i class="fa-solid fa-file-signature"></i>
-                  <span>Obtenir un devis gratuit</span>
-                </a>
-                <p class="text-[11px] text-slate-300 text-center">
-                  Réponse sous 24h ouvrées – Sans engagement.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="hero" id="hero">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
       </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="section-padding">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
-          <div>
-            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
-              Services d'électricité industrielle & tertiaire
-            </h2>
-            <p class="text-sm sm:text-base text-slate-600 max-w-2xl">
-              Des prestations complètes pour alimenter, piloter et sécuriser vos outils de production,
-              vos entrepôts logistiques et vos bâtiments tertiaires.
-            </p>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-industry"></i>
+            <span>Spécialiste Électricité Industrielle</span>
           </div>
-          <div class="text-xs sm:text-sm text-slate-500">
-            <i class="fa-solid fa-circle-info me-1 text-electric"></i>
-            Interventions conformes aux normes en vigueur, matériel de marques reconnues.
-          </div>
-        </div>
-
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <!-- Mise aux normes -->
-          <article class="bg-white rounded-xl shadow-sm border border-slate-200/80 hover:border-electric hover:-translate-y-1 hover:shadow-md transition-all">
-            <div class="p-5 h-full flex flex-col">
-              <div class="w-10 h-10 rounded-md bg-electric/10 text-electric flex items-center justify-center mb-4">
-                <i class="fa-solid fa-shield-halved"></i>
-              </div>
-              <h3 class="font-semibold text-slate-900 mb-2">Mise aux normes et études de puissance</h3>
-              <p class="text-sm text-slate-600 mb-3">
-                Diagnostics d&apos;installations, sélectivité et calculs de courants de court‑circuit.
-                Mise en conformité NF C 15‑100 / NF C 13‑200 pour vos ateliers, racks et locaux techniques.
-              </p>
-              <ul class="mt-auto text-xs text-slate-500 space-y-1">
-                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Tableaux & armoires de distribution</li>
-                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Mise à la terre & liaisons équipotentielles</li>
-                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Protections différentielles & magnétothermiques</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Dépannage -->
-          <article class="bg-white rounded-xl shadow-sm border border-slate-200/80 hover:border-electric hover:-translate-y-1 hover:shadow-md transition-all">
-            <div class="p-5 h-full flex flex-col">
-              <div class="w-10 h-10 rounded-md bg-electric/10 text-electric flex items-center justify-center mb-4">
-                <i class="fa-solid fa-bolt"></i>
-              </div>
-              <h3 class="font-semibold text-slate-900 mb-2">Maintenance & dépannage industriel</h3>
-              <p class="text-sm text-slate-600 mb-3">
-                Recherche de défauts sur lignes tri‑phasées, armoires de commande, variateurs et automatismes.
-                Remise en service rapide de vos chaînes de production et équipements.
-              </p>
-              <ul class="mt-auto text-xs text-slate-500 space-y-1">
-                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Astreintes possibles selon contrat</li>
-                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Mesures & contrôles avant redémarrage</li>
-                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Plans de maintenance préventive</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Domotique -->
-          <article class="bg-white rounded-xl shadow-sm border border-slate-200/80 hover:border-electric hover:-translate-y-1 hover:shadow-md transition-all">
-            <div class="p-5 h-full flex flex-col">
-              <div class="w-10 h-10 rounded-md bg-electric/10 text-electric flex items-center justify-center mb-4">
-                <i class="fa-solid fa-house-signal"></i>
-              </div>
-              <h3 class="font-semibold text-slate-900 mb-2">Supervision & bâtiments connectés</h3>
-              <p class="text-sm text-slate-600 mb-3">
-                Solutions de gestion technique du bâtiment (GTB / GTC), scénarios d&apos;éclairage,
-                pilotage d&apos;énergie et confort pour bureaux, sites logistiques et sites multi‑bâtiments.
-              </p>
-              <ul class="mt-auto text-xs text-slate-500 space-y-1">
-                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Gestion d&apos;éclairage par zone</li>
-                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Suivi des consommations</li>
-                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Automates & bus de terrain</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Installation industrielle -->
-          <article class="bg-white rounded-xl shadow-sm border border-slate-200/80 hover:border-electric hover:-translate-y-1 hover:shadow-md transition-all">
-            <div class="p-5 h-full flex flex-col">
-              <div class="w-10 h-10 rounded-md bg-electric/10 text-electric flex items-center justify-center mb-4">
-                <i class="fa-solid fa-industry"></i>
-              </div>
-              <h3 class="font-semibold text-slate-900 mb-2">Installations industrielles complètes</h3>
-              <p class="text-sm text-slate-600 mb-3">
-                Conception et réalisation d&apos;alimentation d&apos;ateliers, lignes de production,
-                entrepôts logistiques et locaux techniques haute criticité.
-              </p>
-              <ul class="mt-auto text-xs text-slate-500 space-y-1">
-                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Postes de transformation & TGBT</li>
-                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Lignes tri‑phasées & alimentation machines</li>
-                <li><i class="fa-solid fa-circle-check text-electric me-1"></i> Éclairage industriel & bornes de recharge</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pourquoi nous choisir -->
-    <section id="why-us" class="section-padding bg-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
-        <div>
-          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-electric mb-2">
-            Garantie, sécurité & transparence
+          <h1 class="hero-title">
+            Vos installations électriques industrielles<br />
+            <span class="highlight-red">entre de bonnes mains</span>
+          </h1>
+          <p class="hero-description">
+            Électricité Grappe accompagne les entreprises industrielles dans leurs projets électriques :
+            installations de puissance, tableaux triphasés, automatismes, maintenance préventive et dépannage d'urgence.
+            Expertise technique, réactivité et conformité aux normes.
           </p>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
-            Pourquoi choisir <span class="text-electric">Électricité Grappe</span> pour vos travaux électriques&nbsp;?
-          </h2>
-          <p class="text-sm sm:text-base text-slate-600 mb-6">
-            Basée à Champagnole, Électricité Grappe accompagne principalement les industriels, logisticiens et acteurs du tertiaire :
-            extensions d&apos;ateliers, création de nouvelles lignes, modernisation de postes et sécurisation de locaux techniques.
-            Nous vous guidons vers des solutions robustes, évolutives et conformes aux normes en vigueur.
-          </p>
-
-          <dl class="space-y-4">
-            <div class="flex gap-4">
-              <div class="mt-1">
-                <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-electric text-white">
-                  <i class="fa-solid fa-file-lines"></i>
-                </span>
-              </div>
-              <div>
-                <dt class="font-semibold text-slate-900">Devis gratuit et détaillé</dt>
-                <dd class="text-sm text-slate-600">
-                  Chaque devis précise clairement la nature des travaux, le matériel utilisé et les délais prévus,
-                  sans frais cachés.
-                </dd>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="mt-1">
-                <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-electric text-white">
-                  <i class="fa-solid fa-file-shield"></i>
-                </span>
-              </div>
-              <div>
-                <dt class="font-semibold text-slate-900">Assurance décennale</dt>
-                <dd class="text-sm text-slate-600">
-                  Vos installations sont couvertes par notre assurance décennale, gage de sérieux et de sécurité pour vos projets.
-                </dd>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="mt-1">
-                <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-electric text-white">
-                  <i class="fa-solid fa-award"></i>
-                </span>
-              </div>
-              <div>
-                <dt class="font-semibold text-slate-900">Certifié RGE / Qualifelec</dt>
-                <dd class="text-sm text-slate-600">
-                  Nos qualifications vous permettent de bénéficier d’aides et de subventions pour certains travaux
-                  d’amélioration énergétique.
-                </dd>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="mt-1">
-                <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-electric text-white">
-                  <i class="fa-solid fa-scale-balanced"></i>
-                </span>
-              </div>
-              <div>
-                <dt class="font-semibold text-slate-900">Prix transparents</dt>
-                <dd class="text-sm text-slate-600">
-                  Grille tarifaire claire, facturation au juste prix et validation de chaque étape avant intervention.
-                </dd>
-              </div>
-            </div>
-          </dl>
-        </div>
-
-        <!-- Visuel / Stats -->
-        <div class="space-y-5">
-          <div class="rounded-xl overflow-hidden shadow-md border border-slate-200">
-            <img
-              src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1200&q=80"
-              alt="Tableaux électriques industriels dans un atelier de production"
-              class="w-full h-56 md:h-64 object-cover"
-              loading="lazy"
-            />
-          </div>
-          <div class="grid grid-cols-3 gap-4 text-center">
-            <div class="bg-slate-50 rounded-lg border border-slate-200 py-4 px-2">
-              <p class="text-xl font-bold text-electric">15+</p>
-              <p class="text-xs text-slate-600">Années d'expérience</p>
-            </div>
-            <div class="bg-slate-50 rounded-lg border border-slate-200 py-4 px-2">
-              <p class="text-xl font-bold text-electric">800+</p>
-              <p class="text-xs text-slate-600">Interventions / an</p>
-            </div>
-            <div class="bg-slate-50 rounded-lg border border-slate-200 py-4 px-2">
-              <p class="text-xl font-bold text-electric">4.9/5</p>
-              <p class="text-xs text-slate-600">Avis clients moyens</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bandeau Appel à l'action -->
-    <section id="cta" class="section-padding">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="rounded-2xl bg-electric text-white p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-lg">
-          <div>
-            <h2 class="text-xl sm:text-2xl font-bold mb-2">
-              Un projet en tête ou une panne à résoudre&nbsp;?
-            </h2>
-            <p class="text-sm sm:text-base text-slate-100 max-w-xl">
-              Expliquez-nous votre situation en quelques mots et nous revenons vers vous avec une proposition
-              personnalisée et un devis gratuit.
-            </p>
-          </div>
-          <div class="flex flex-col gap-3 w-full md:w-auto">
-            <a href="#contact"
-               class="inline-flex items-center justify-center gap-2 bg-safety text-slate-900 font-semibold text-sm px-5 py-2.5 rounded-md shadow-md hover:bg-amber-400 transition-colors">
-              <i class="fa-solid fa-envelope-open-text"></i>
-              <span>Contactez-nous</span>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-file-invoice"></i>
+              <span>Demander un devis</span>
             </a>
-            <a href="tel:0102030405"
-               class="inline-flex items-center justify-center gap-2 border border-white/50 text-white text-xs px-4 py-2 rounded-md hover:bg-white/10 transition-colors">
-              <i class="fa-solid fa-phone"></i>
-              <span>Urgence / dépannage : 01 02 03 04 05</span>
+            <a href="tel:0750000000" class="btn btn-secondary">
+              <i class="fas fa-phone"></i>
+              <span>Appeler maintenant</span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">20+</span>
+              <span class="stat-label">Années d'expérience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Projets industriels</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Disponibilité</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Nos Services</span>
+          <h2 class="section-title">Solutions électriques pour l'industrie</h2>
+          <p class="section-description">
+            Des prestations complètes adaptées aux besoins spécifiques des entreprises industrielles,
+            de la conception à la maintenance, en passant par l'installation et la mise en conformité.
+          </p>
+        </div>
+        
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3 class="service-title">Installations de Puissance</h3>
+            <p class="service-description">
+              Conception et installation de tableaux électriques triphasés, armoires de distribution,
+              postes de transformation et réseaux de puissance pour vos équipements industriels.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Tableaux jusqu'à 630A</li>
+              <li><i class="fas fa-check"></i> Postes de transformation</li>
+              <li><i class="fas fa-check"></i> Réseaux triphasés</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-microchip"></i>
+            </div>
+            <h3 class="service-title">Automatismes & GTB</h3>
+            <p class="service-description">
+              Programmation de systèmes automatisés, gestion technique du bâtiment (GTB),
+              supervision et contrôle-commande pour optimiser vos processus industriels.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Automates programmables</li>
+              <li><i class="fas fa-check"></i> Supervision SCADA</li>
+              <li><i class="fas fa-check"></i> Interfaces opérateur</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3 class="service-title">Maintenance Préventive</h3>
+            <p class="service-description">
+              Contrats de maintenance, inspections régulières, thermographie infrarouge,
+              tests de continuité et mise à jour de vos installations pour éviter les pannes.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Contrats annuels</li>
+              <li><i class="fas fa-check"></i> Thermographie IR</li>
+              <li><i class="fas fa-check"></i> Rapports détaillés</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="service-title">Dépannage d'Urgence</h3>
+            <p class="service-description">
+              Intervention rapide 24/7 pour résoudre vos pannes électriques critiques.
+              Diagnostic précis, réparation immédiate et remise en service sécurisée.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Disponibilité 24/7</li>
+              <li><i class="fas fa-check"></i> Intervention rapide</li>
+              <li><i class="fas fa-check"></i> Diagnostic expert</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="service-title">Mise aux Normes</h3>
+            <p class="service-description">
+              Audit complet de vos installations, mise en conformité selon NF C 15-100,
+              NF EN 61439 et réglementation ATEX pour sécuriser vos sites industriels.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Audit complet</li>
+              <li><i class="fas fa-check"></i> Conformité ATEX</li>
+              <li><i class="fas fa-check"></i> Certifications</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="service-title">Éclairage Industriel</h3>
+            <p class="service-description">
+              Installation d'éclairage LED haute performance pour ateliers, entrepôts et zones de production.
+              Optimisation énergétique et conformité aux normes d'éclairement.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> LED haute performance</li>
+              <li><i class="fas fa-check"></i> Économies d'énergie</li>
+              <li><i class="fas fa-check"></i> Conformité normes</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise" id="expertise">
+      <div class="container">
+        <div class="expertise-content">
+          <div class="expertise-text">
+            <span class="section-badge">Notre Expertise</span>
+            <h2 class="section-title">Pourquoi choisir Électricité Grappe ?</h2>
+            <p class="expertise-intro">
+              Forte de plus de 20 ans d'expérience dans l'électricité industrielle,
+              Électricité Grappe maîtrise tous les aspects techniques des installations électriques
+              pour entreprises, de la petite PME aux grands sites industriels.
+            </p>
+            
+            <div class="expertise-list">
+              <div class="expertise-item">
+                <div class="expertise-icon">
+                  <i class="fas fa-certificate"></i>
+                </div>
+                <div class="expertise-details">
+                  <h3>Certifications & Qualifications</h3>
+                  <p>Équipe certifiée Qualifelec, habilitations électriques H0V-B0, formation continue aux dernières normes et réglementations.</p>
+                </div>
+              </div>
+
+              <div class="expertise-item">
+                <div class="expertise-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="expertise-details">
+                  <h3>Équipe d'Experts</h3>
+                  <p>Électriciens industriels expérimentés, automaticiens et techniciens spécialisés dans les installations de puissance et automatismes.</p>
+                </div>
+              </div>
+
+              <div class="expertise-item">
+                <div class="expertise-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="expertise-details">
+                  <h3>Réactivité Garantie</h3>
+                  <p>Intervention rapide sur site, disponibilité 24/7 pour les urgences, respect des délais et planification optimisée.</p>
+                </div>
+              </div>
+
+              <div class="expertise-item">
+                <div class="expertise-icon">
+                  <i class="fas fa-euro-sign"></i>
+                </div>
+                <div class="expertise-details">
+                  <h3>Devis Gratuit & Transparent</h3>
+                  <p>Devis détaillés gratuits sous 48h, tarification claire sans frais cachés, optimisation des coûts pour vos projets.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="expertise-visual">
+            <div class="expertise-image">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80" alt="Tableau électrique industriel" loading="lazy" />
+            </div>
+            <div class="expertise-badges">
+              <div class="badge-item">
+                <i class="fas fa-award"></i>
+                <span>Qualifelec</span>
+              </div>
+              <div class="badge-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Assurance Décennale</span>
+              </div>
+              <div class="badge-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Normes NF C 15-100</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Réalisations Section -->
+    <section class="realisations" id="realisations">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Nos Réalisations</span>
+          <h2 class="section-title">Projets Industriels Réalisés</h2>
+          <p class="section-description">
+            Découvrez quelques-uns de nos projets récents dans différents secteurs industriels.
+          </p>
+        </div>
+        
+        <div class="realisations-grid">
+          <article class="realisation-card">
+            <div class="realisation-image">
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Installation tableau électrique industriel" loading="lazy" />
+            </div>
+            <div class="realisation-content">
+              <h3>Installation Tableau 400A</h3>
+              <p class="realisation-sector">Secteur : Métallurgie</p>
+              <p>Réalisation complète d'un tableau électrique de distribution 400A pour une usine de transformation métallurgique, avec automatismes de sécurité.</p>
+            </div>
+          </article>
+
+          <article class="realisation-card">
+            <div class="realisation-image">
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Automatismes industriels" loading="lazy" />
+            </div>
+            <div class="realisation-content">
+              <h3>Automatisation Ligne de Production</h3>
+              <p class="realisation-sector">Secteur : Agroalimentaire</p>
+              <p>Mise en place d'un système d'automatisation complet pour une ligne de production alimentaire avec supervision SCADA.</p>
+            </div>
+          </article>
+
+          <article class="realisation-card">
+            <div class="realisation-image">
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Éclairage industriel LED" loading="lazy" />
+            </div>
+            <div class="realisation-content">
+              <h3>Rénovation Éclairage LED</h3>
+              <p class="realisation-sector">Secteur : Logistique</p>
+              <p>Remplacement complet de l'éclairage d'un entrepôt de 5000m² par des solutions LED haute performance, économie de 60% sur la consommation.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Un projet électrique industriel ?</h2>
+          <p>Contactez-nous pour un devis gratuit et personnalisé. Notre équipe vous accompagne de la conception à la mise en service.</p>
+          <div class="cta-buttons">
+            <a href="#contact" class="btn btn-primary btn-large">
+              <i class="fas fa-file-invoice"></i>
+              <span>Demander un devis gratuit</span>
+            </a>
+            <a href="tel:0750000000" class="btn btn-white btn-large">
+              <i class="fas fa-phone"></i>
+              <span>07 50 00 00 00</span>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact & Infos -->
-    <section id="contact" class="section-padding bg-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10">
-        <!-- Infos -->
-        <div>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
-            Contact & zone d’intervention
-          </h2>
-          <p class="text-sm sm:text-base text-slate-600 mb-6">
-            Nous intervenons rapidement sur vos sites de production, entrepôts et bâtiments tertiaires à Champagnole
-            et dans les communes voisines, pour la création, la modification ou la maintenance de vos installations.
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Contact</span>
+          <h2 class="section-title">Contactez-nous</h2>
+          <p class="section-description">
+            Notre équipe est à votre disposition pour répondre à toutes vos questions et vous accompagner dans vos projets.
           </p>
-
-          <div class="space-y-4 text-sm">
-            <div class="flex gap-3">
-              <i class="fa-solid fa-location-dot mt-1 text-electric"></i>
-              <div>
-                <p class="font-semibold">Électricité Grappe – Électricité Générale</p>
-                <p class="text-slate-600">12 rue des Artisans<br />39300 Champagnole</p>
+        </div>
+        
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Adresse</h3>
+                <p>12 rue des Artisans<br />39300 Champagnole</p>
               </div>
             </div>
 
-            <div class="flex gap-3">
-              <i class="fa-solid fa-phone mt-1 text-electric"></i>
-              <div>
-                <p class="font-semibold">Téléphone</p>
-                <a href="tel:0102030405" class="text-slate-600 hover:text-electric">01 02 03 04 05</a>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Téléphone</h3>
+                <p><a href="tel:0750000000">07 50 00 00 00</a></p>
               </div>
             </div>
 
-            <div class="flex gap-3">
-              <i class="fa-solid fa-envelope mt-1 text-electric"></i>
-              <div>
-                <p class="font-semibold">E‑mail</p>
-                <a href="mailto:contact@electricitegrappe.fr" class="text-slate-600 hover:text-electric">contact@electricitegrappe.fr</a>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Email</h3>
+                <p><a href="mailto:contact@electricitegrappe.fr">contact@electricitegrappe.fr</a></p>
               </div>
             </div>
 
-            <div class="flex gap-3">
-              <i class="fa-solid fa-clock mt-1 text-electric"></i>
-              <div>
-                <p class="font-semibold">Horaires d’intervention</p>
-                <p class="text-slate-600">Du lundi au vendredi : 8h00 – 18h30<br />Dépannage d’urgence : 7j/7</p>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Horaires</h3>
+                <p>Lundi - Vendredi : 8h00 - 18h00<br />Urgences : 24/7</p>
               </div>
             </div>
 
-            <div class="flex gap-3">
-              <i class="fa-solid fa-map mt-1 text-electric"></i>
-              <div>
-                <p class="font-semibold">Zone d’intervention</p>
-                <p class="text-slate-600">
-                  Champagnole, Arbois, Poligny, Lons-le-Saunier et zone industrielle dans un rayon de 30 km.
-                </p>
-              </div>
+            <div class="contact-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2760.123456789!2d5.9123456!3d46.7890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDQ3JzIwLjQiTiA1wrA1NCc0NC40IkU!5e0!3m2!1sfr!2sfr!4v1234567890123!5m2!1sfr!2sfr"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localisation Électricité Grappe"
+              ></iframe>
             </div>
           </div>
-        </div>
 
-        <!-- Formulaire simple (visuel) -->
-        <div class="bg-slate-50 rounded-xl border border-slate-200 shadow-sm p-6 sm:p-7">
-          <h3 class="text-lg font-semibold text-slate-900 mb-2">
-            Décrivez votre besoin
-          </h3>
-          <p class="text-sm text-slate-600 mb-5">
-            Ce formulaire est un exemple statique. Connectez-le ensuite à votre outil de formulaire ou CRM.
-          </p>
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nom">Nom / Entreprise *</label>
+                  <input type="text" id="nom" name="nom" required />
+                </div>
+                <div class="form-group">
+                  <label for="prenom">Prénom</label>
+                  <input type="text" id="prenom" name="prenom" />
+                </div>
+              </div>
 
-          <form class="space-y-4">
-            <div>
-              <label for="name" class="block text-xs font-medium text-slate-700 mb-1">Nom / Entreprise</label>
-              <input id="name" type="text" class="w-full rounded-md border-slate-300 text-sm shadow-sm focus:border-electric focus:ring-electric" placeholder="Ex : Dupont ou SARL Bâtiment Plus" />
-            </div>
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label for="email" class="block text-xs font-medium text-slate-700 mb-1">E‑mail</label>
-                <input id="email" type="email" class="w-full rounded-md border-slate-300 text-sm shadow-sm focus:border-electric focus:ring-electric" placeholder="vous@exemple.fr" />
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="telephone">Téléphone *</label>
+                  <input type="tel" id="telephone" name="telephone" required />
+                </div>
               </div>
-              <div>
-                <label for="phone" class="block text-xs font-medium text-slate-700 mb-1">Téléphone</label>
-                <input id="phone" type="tel" class="w-full rounded-md border-slate-300 text-sm shadow-sm focus:border-electric focus:ring-electric" placeholder="06 00 00 00 00" />
+
+              <div class="form-group">
+                <label for="sujet">Type de projet *</label>
+                <select id="sujet" name="sujet" required>
+                  <option value="">Sélectionnez un type</option>
+                  <option value="installation">Installation neuve</option>
+                  <option value="renovation">Rénovation / Mise aux normes</option>
+                  <option value="automatisme">Automatismes / GTB</option>
+                  <option value="maintenance">Maintenance préventive</option>
+                  <option value="depannage">Dépannage d'urgence</option>
+                  <option value="autre">Autre demande</option>
+                </select>
               </div>
-            </div>
-            <div>
-              <label for="topic" class="block text-xs font-medium text-slate-700 mb-1">Type de projet</label>
-              <select id="topic" class="w-full rounded-md border-slate-300 text-sm shadow-sm focus:border-electric focus:ring-electric">
-                <option>Choisir une option</option>
-                <option>Mise aux normes / rénovation</option>
-                <option>Dépannage / panne électrique</option>
-                <option>Domotique / maison connectée</option>
-                <option>Installation industrielle / tertiaire</option>
-                <option>Autre demande</option>
-              </select>
-            </div>
-            <div>
-              <label for="message" class="block text-xs font-medium text-slate-700 mb-1">Votre message</label>
-              <textarea id="message" rows="4" class="w-full rounded-md border-slate-300 text-sm shadow-sm focus:border-electric focus:ring-electric" placeholder="Décrivez brièvement votre projet ou votre panne…"></textarea>
-            </div>
-            <button type="button" class="w-full inline-flex items-center justify-center gap-2 bg-electric text-white text-sm font-semibold py-2.5 rounded-md shadow-sm hover:bg-blue-700 transition-colors">
-              <i class="fa-solid fa-paper-plane text-xs"></i>
-              <span>Envoyer ma demande (exemple)</span>
-            </button>
-            <p class="text-[11px] text-slate-500">
-              En envoyant ce formulaire, vous acceptez que vos données soient utilisées pour être recontacté dans le cadre de votre demande.
-            </p>
-          </form>
+
+              <div class="form-group">
+                <label for="message">Votre message *</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <input type="checkbox" id="rgpd" name="rgpd" required />
+                <label for="rgpd">J'accepte que mes données soient utilisées pour être recontacté dans le cadre de ma demande.</label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-large btn-full">
+                <i class="fas fa-paper-plane"></i>
+                <span>Envoyer ma demande</span>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-200 pt-10 pb-5">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-4 gap-8 text-sm pb-6 border-b border-slate-700/60">
-        <!-- Logo & pitch -->
-        <div class="md:col-span-2 space-y-3">
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 bg-electric text-white flex items-center justify-center rounded-md">
-              <i class="fa-solid fa-bolt"></i>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <i class="fas fa-bolt"></i>
             </div>
-            <div>
-              <p class="text-xs font-bold tracking-[0.25em] uppercase">ÉLECTRICITÉ GRAPPE</p>
-              <p class="text-[11px] text-slate-400">Spécialiste en électricité générale</p>
+            <div class="logo-text">
+              <span class="logo-name">ÉLECTRICITÉ GRAPPE</span>
+              <span class="logo-tagline">Électricité Industrielle</span>
             </div>
           </div>
-          <p class="text-slate-300 text-xs sm:text-sm">
-            Équipe d’électriciens qualifiés pour vos travaux d’installation, de rénovation et de dépannage.
-            Interventions sécurisées, conseils techniques et respect des normes.
+          <p class="footer-description">
+            Spécialiste en installations électriques industrielles depuis plus de 20 ans.
+            Expertise technique, réactivité et conformité aux normes pour vos projets.
           </p>
         </div>
 
-        <!-- Zone d'intervention -->
-        <div>
-          <h3 class="text-xs font-semibold tracking-wide uppercase text-slate-400 mb-3">Zone d’intervention</h3>
-          <p class="text-xs sm:text-sm text-slate-300">
-            Champagnole et agglomération<br />
-            Arbois – Poligny – Lons-le-Saunier<br />
-            Rayon d’environ 30&nbsp;km.
-          </p>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li><a href="#services">Installations de Puissance</a></li>
+            <li><a href="#services">Automatismes & GTB</a></li>
+            <li><a href="#services">Maintenance Préventive</a></li>
+            <li><a href="#services">Dépannage d'Urgence</a></li>
+            <li><a href="#services">Mise aux Normes</a></li>
+          </ul>
         </div>
 
-        <!-- Légal -->
-        <div>
-          <h3 class="text-xs font-semibold tracking-wide uppercase text-slate-400 mb-3">Mentions légales</h3>
-          <ul class="space-y-1 text-xs sm:text-sm text-slate-300">
-            <li>SIRET : 000 000 000 00000</li>
-            <li>Assurance décennale : Oui</li>
-            <li>RGE / Qualifelec : Oui</li>
-            <li><a href="#" class="hover:text-safety">Mentions légales</a></li>
-            <li><a href="#" class="hover:text-safety">Politique de confidentialité</a></li>
+        <div class="footer-section">
+          <h3>Entreprise</h3>
+          <ul class="footer-links">
+            <li><a href="#expertise">Notre Expertise</a></li>
+            <li><a href="#realisations">Réalisations</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Devis gratuit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i> 12 rue des Artisans, 39300 Champagnole</li>
+            <li><i class="fas fa-phone-alt"></i> <a href="tel:0750000000">07 50 00 00 00</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:contact@electricitegrappe.fr">contact@electricitegrappe.fr</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 text-[11px] text-slate-500">
-        <p>© <span id="year"></span> Électricité Grappe – Tous droits réservés.</p>
-        <p>Site vitrine – Exemple de maquette UI/UX pour entreprise d’électricité générale.</p>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Électricité Grappe. Tous droits réservés.</p>
+        <div class="footer-legal">
+          <a href="#">Mentions légales</a>
+          <span>|</span>
+          <a href="#">Politique de confidentialité</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Met à jour automatiquement l'année dans le footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
-
