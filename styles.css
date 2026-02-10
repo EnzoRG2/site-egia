@@ -860,6 +860,62 @@ section {
   line-height: 1.5;
 }
 
+.form-message {
+  margin-top: var(--spacing-sm);
+  font-size: 0.875rem;
+}
+
+.form-message--success {
+  color: #166534;
+}
+
+.form-message--error {
+  color: #b91c1c;
+}
+
+/* ============================================
+   LEGAL SECTION
+   ============================================ */
+
+.legal {
+  background-color: var(--color-gray-100);
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.legal-block {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+  font-size: 0.9rem;
+  color: var(--color-gray-700);
+}
+
+.legal-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-gray-900);
+}
+
+.legal-block p + p {
+  margin-top: 0.35rem;
+}
+
+.legal-block a {
+  color: var(--color-blue);
+}
+
+.legal-block a:hover {
+  text-decoration: underline;
+}
+
 /* ============================================
    FOOTER
    ============================================ */

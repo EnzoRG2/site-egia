@@ -77,6 +77,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ============================================
 
 const contactForm = document.getElementById('contactForm');
+const formMessage = document.getElementById('formMessage');
 
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
@@ -85,10 +86,22 @@ if (contactForm) {
     // Récupération des données du formulaire
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData);
+    const honeypot = data.website;
     
+    // Honeypot anti-spam : si rempli, on ignore
+    if (honeypot) {
+      contactForm.reset();
+      return;
+    }
+
     // Validation basique
     if (!data.nom || !data.email || !data.telephone || !data.message) {
-      alert('Veuillez remplir tous les champs obligatoires.');
+      if (formMessage) {
+        formMessage.textContent = 'Veuillez remplir tous les champs obligatoires.';
+        formMessage.className = 'form-message form-message--error';
+      } else {
+        alert('Veuillez remplir tous les champs obligatoires.');
+      }
       return;
     }
     
@@ -115,7 +128,12 @@ if (contactForm) {
     
     // Pour l'instant, affichage console et message de confirmation
     console.log('Données du formulaire:', data);
-    alert('Merci pour votre message ! Nous vous contacterons dans les plus brefs délais.');
+    if (formMessage) {
+      formMessage.textContent = 'Merci pour votre message ! Nous vous contacterons dans les plus brefs délais.';
+      formMessage.className = 'form-message form-message--success';
+    } else {
+      alert('Merci pour votre message ! Nous vous contacterons dans les plus brefs délais.');
+    }
     contactForm.reset();
   });
 }

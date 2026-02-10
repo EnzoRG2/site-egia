@@ -457,7 +457,7 @@
           </div>
 
           <div class="contact-form-wrapper">
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" id="contactForm" novalidate>
               <div class="form-row">
                 <div class="form-group">
                   <label for="nom">Nom / Entreprise *</label>
@@ -503,11 +503,53 @@
                 <label for="rgpd">J'accepte que mes données soient utilisées pour être recontacté dans le cadre de ma demande.</label>
               </div>
 
+              <!-- Champ honeypot anti-spam (doit rester vide) -->
+              <div class="form-group" style="display: none;">
+                <label for="website">Site web (ne pas remplir)</label>
+                <input type="text" id="website" name="website" autocomplete="off" />
+              </div>
+
+              <!-- Message de statut formulaire -->
+              <div id="formMessage" class="form-message" aria-live="polite"></div>
+
               <button type="submit" class="btn btn-primary btn-large btn-full">
                 <i class="fas fa-paper-plane"></i>
                 <span>Envoyer ma demande</span>
               </button>
             </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentions légales & confidentialité -->
+    <section class="legal">
+      <div class="container">
+        <div class="legal-grid">
+          <div class="legal-block" id="mentions-legales">
+            <h2 class="legal-title">Mentions légales</h2>
+            <p><strong>Raison sociale :</strong> GRAPPE PERE ET FILS</p>
+            <p><strong>Adresse :</strong> 339 Rue sous Burgille, ZI La Planchette, 39300 Champagnole, France</p>
+            <p><strong>Téléphone :</strong> 03 84 52 21 25</p>
+            <p><strong>Email :</strong> <a href="mailto:egia.grappe@wanadoo.fr">egia.grappe@wanadoo.fr</a></p>
+            <p><strong>Responsable de la publication :</strong> GRAPPE PERE ET FILS</p>
+            <p><strong>Hébergeur :</strong> IONOS SE – Elgendorfer Str. 57, 56410 Montabaur, Allemagne</p>
+          </div>
+          <div class="legal-block" id="politique-confidentialite">
+            <h2 class="legal-title">Politique de confidentialité</h2>
+            <p>
+              Les informations collectées via le formulaire de contact (nom, coordonnées, détails de votre projet)
+              sont utilisées uniquement pour répondre à vos demandes et préparer d'éventuels devis.
+            </p>
+            <p>
+              Vos données ne sont ni revendues ni transmises à des tiers en dehors des besoins liés au traitement
+              de votre demande. Elles sont conservées pendant la durée nécessaire au suivi de la relation commerciale.
+            </p>
+            <p>
+              Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données.
+              Pour exercer ces droits, vous pouvez nous contacter à l'adresse suivante :
+              <a href="mailto:egia.grappe@wanadoo.fr">egia.grappe@wanadoo.fr</a>.
+            </p>
           </div>
         </div>
       </div>
@@ -570,9 +612,9 @@
       <div class="footer-bottom">
         <p>&copy; <span id="currentYear"></span> GRAPPE PERE ET FILS. Tous droits réservés.</p>
         <div class="footer-legal">
-          <a href="#">Mentions légales</a>
+          <a href="#mentions-legales">Mentions légales</a>
           <span>|</span>
-          <a href="#">Politique de confidentialité</a>
+          <a href="#politique-confidentialite">Politique de confidentialité</a>
         </div>
       </div>
     </div>
