@@ -141,33 +141,13 @@ button {
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: all 0.3s ease;
-}
-
-.header.scrolled .navbar {
-  padding: 0.5rem 0;
-}
-
-.header.scrolled .logo-icon {
-  width: 36px;
-  height: 36px;
-  font-size: 1rem;
-}
-
-.header.scrolled .logo-name {
-  font-size: 0.75rem;
-}
-
-.header.scrolled .logo-tagline {
-  display: none;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-md) 0;
-  transition: padding 0.3s ease;
+  padding: 0.5rem 0;
 }
 
 .logo {

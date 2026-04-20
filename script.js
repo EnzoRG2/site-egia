@@ -40,10 +40,8 @@ window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
 
   if (currentScroll > 100) {
-    header.classList.add('scrolled');
     header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
   } else {
-    header.classList.remove('scrolled');
     header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
   }
 
