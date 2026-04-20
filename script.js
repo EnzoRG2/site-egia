@@ -193,6 +193,20 @@ if ('loading' in HTMLImageElement.prototype) {
 }
 
 // ============================================
+// EXPERTISE CAROUSEL
+// ============================================
+
+const carouselSlides = document.querySelectorAll('.carousel-slide');
+if (carouselSlides.length > 1) {
+  let currentSlide = 0;
+  setInterval(() => {
+    carouselSlides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % carouselSlides.length;
+    carouselSlides[currentSlide].classList.add('active');
+  }, 4000);
+}
+
+// ============================================
 // STATS COUNTER ANIMATION
 // ============================================
 

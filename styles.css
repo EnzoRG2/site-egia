@@ -608,6 +608,35 @@ section {
   display: block;
 }
 
+.expertise-carousel {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--color-gray-100);
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
 .expertise-badges {
   display: flex;
   flex-wrap: wrap;
