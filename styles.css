@@ -141,6 +141,25 @@ button {
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled .navbar {
+  padding: 0.5rem 0;
+}
+
+.header.scrolled .logo-icon {
+  width: 36px;
+  height: 36px;
+  font-size: 1rem;
+}
+
+.header.scrolled .logo-name {
+  font-size: 0.75rem;
+}
+
+.header.scrolled .logo-tagline {
+  display: none;
 }
 
 .navbar {
@@ -148,6 +167,7 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-md) 0;
+  transition: padding 0.3s ease;
 }
 
 .logo {
@@ -465,14 +485,14 @@ section {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-lg);
 }
 
 .service-card {
   background-color: var(--color-white);
   border-radius: 12px;
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: var(--transition-base);
   border: 2px solid transparent;
@@ -485,8 +505,8 @@ section {
 }
 
 .service-icon {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   background: linear-gradient(135deg, var(--color-blue), var(--color-blue-dark));
   color: var(--color-white);
   display: flex;
@@ -499,7 +519,7 @@ section {
 
 .service-title {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-gray-900);
   margin-bottom: var(--spacing-sm);
@@ -507,8 +527,9 @@ section {
 
 .service-description {
   color: var(--color-gray-600);
-  line-height: 1.7;
-  margin-bottom: var(--spacing-md);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-sm);
 }
 
 .service-features {
@@ -670,8 +691,8 @@ section {
 
 .realisations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
 }
 
 .realisation-card {
@@ -689,7 +710,7 @@ section {
 
 .realisation-image {
   width: 100%;
-  height: 250px;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -705,12 +726,12 @@ section {
 }
 
 .realisation-content {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
 }
 
 .realisation-content h3 {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--color-gray-900);
   margin-bottom: var(--spacing-xs);
@@ -725,7 +746,8 @@ section {
 
 .realisation-content p {
   color: var(--color-gray-600);
-  line-height: 1.7;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 /* ============================================
@@ -1132,7 +1154,7 @@ section {
 
   .services-grid,
   .realisations-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-bottom {
@@ -1148,6 +1170,11 @@ section {
 
   section {
     padding: var(--spacing-xl) 0;
+  }
+
+  .services-grid,
+  .realisations-grid {
+    grid-template-columns: 1fr;
   }
 
   .hero-cta,
