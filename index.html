@@ -54,7 +54,6 @@
           <li><a href="#expertise" class="nav-link">L'entreprise</a></li>
           <li><a href="#services" class="nav-link">Nos prestations</a></li>
           <li><a href="#realisations" class="nav-link">Nos réalisations</a></li>
-          <li><a href="#plan-acces" class="nav-link">Plan d'accès</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
           <li><a href="#contact" class="nav-link btn-nav">Devis gratuit</a></li>
         </ul>
@@ -519,7 +518,7 @@
           </div>
 
           <div class="contact-form-wrapper">
-            <form class="contact-form" id="contactForm" novalidate>
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/egia.grappe@wanadoo.fr" method="POST" novalidate>
               <div class="form-row">
                 <div class="form-group">
                   <label for="nom">Nom / Entreprise *</label>
@@ -565,11 +564,12 @@
                 <label for="rgpd">J'accepte que mes données soient utilisées pour être recontacté dans le cadre de ma demande.</label>
               </div>
 
-              <!-- Champ honeypot anti-spam (doit rester vide) -->
-              <div class="form-group" style="display: none;">
-                <label for="website">Site web (ne pas remplir)</label>
-                <input type="text" id="website" name="website" autocomplete="off" />
-              </div>
+              <!-- FormSubmit configuration -->
+              <input type="hidden" name="_subject" value="Nouveau message depuis egiagrappe.fr" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://www.egiagrappe.fr/#contact" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" style="display:none" />
 
               <!-- Message de statut formulaire -->
               <div id="formMessage" class="form-message" aria-live="polite"></div>

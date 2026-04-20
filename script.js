@@ -82,59 +82,50 @@ const formMessage = document.getElementById('formMessage');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
-    // Récupération des données du formulaire
+
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData);
-    const honeypot = data.website;
-    
-    // Honeypot anti-spam : si rempli, on ignore
-    if (honeypot) {
-      contactForm.reset();
-      return;
-    }
 
     // Validation basique
     if (!data.nom || !data.email || !data.telephone || !data.message) {
       if (formMessage) {
         formMessage.textContent = 'Veuillez remplir tous les champs obligatoires.';
         formMessage.className = 'form-message form-message--error';
-      } else {
-        alert('Veuillez remplir tous les champs obligatoires.');
       }
       return;
     }
-    
-    // Ici, tu peux ajouter l'envoi vers ton backend/API
-    // Exemple avec fetch :
-    /*
-    fetch('/api/contact', {
+
+    // Envoi via FormSubmit
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.querySelector('span').textContent = 'Envoi en cours...';
+
+    fetch(contactForm.action, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
+      body: formData,
+      headers: { 'Accept': 'application/json' }
     })
-    .then(response => response.json())
-    .then(result => {
-      alert('Message envoyé avec succès !');
-      contactForm.reset();
+    .then(response => {
+      if (response.ok) {
+        if (formMessage) {
+          formMessage.textContent = 'Merci pour votre message ! Nous vous contacterons dans les plus brefs délais.';
+          formMessage.className = 'form-message form-message--success';
+        }
+        contactForm.reset();
+      } else {
+        throw new Error('Erreur serveur');
+      }
     })
-    .catch(error => {
-      console.error('Erreur:', error);
-      alert('Une erreur est survenue. Veuillez réessayer.');
+    .catch(() => {
+      if (formMessage) {
+        formMessage.textContent = 'Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.';
+        formMessage.className = 'form-message form-message--error';
+      }
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.querySelector('span').textContent = 'Envoyer ma demande';
     });
-    */
-    
-    // Pour l'instant, affichage console et message de confirmation
-    console.log('Données du formulaire:', data);
-    if (formMessage) {
-      formMessage.textContent = 'Merci pour votre message ! Nous vous contacterons dans les plus brefs délais.';
-      formMessage.className = 'form-message form-message--success';
-    } else {
-      alert('Merci pour votre message ! Nous vous contacterons dans les plus brefs délais.');
-    }
-    contactForm.reset();
   });
 }
 
