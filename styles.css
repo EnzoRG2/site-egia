@@ -730,6 +730,54 @@ section {
   line-height: 1.5;
 }
 
+.realisation-card--more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-blue), var(--color-blue-dark));
+  color: var(--color-white);
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 280px;
+}
+
+.realisation-card--more:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 86, 179, 0.3);
+}
+
+.realisation-more-content {
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+.realisation-more-content i {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.9;
+}
+
+.realisation-more-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.realisation-more-content p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.realisations-page {
+  padding: var(--spacing-2xl) 0;
+  margin-top: var(--spacing-lg);
+}
+
+.realisations-back {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+}
+
 /* ============================================
    CTA SECTION
    ============================================ */
